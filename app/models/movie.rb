@@ -11,7 +11,8 @@ class Movie < ApplicationRecord
 
   # - duration: must be integer between 0 and 2764800, but it can be blank (hint: there is an option `:allow_blank => true`)
   validates :duration, :numericality => { :only_integer => true,
-  :greater_than_or_equal_to => 0, :less_than_or_equal_to => 2764800 }
+  :greater_than_or_equal_to => 0, :less_than_or_equal_to => 2764800,
+  :allow_blank => true }
 
   # - description: no rules
   # - image_url: no rules
